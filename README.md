@@ -1,6 +1,5 @@
-# Hyperparticle
-
-Recursion is recursive.
+# [Hyperparticle](http://hyperparticle.com)
+Recursion is recursive. A personal website. http://hyperparticle.com
 
 ## Author
 
@@ -10,5 +9,4 @@ Recursion is recursive.
 
 
 ## License
-
 This project uses the [Lanyon](https://github.com/poole/lanyon) theme for [Poole](https://github.com/poole/poole). Open sourced under the [MIT license](LICENSE.md). :heart:
