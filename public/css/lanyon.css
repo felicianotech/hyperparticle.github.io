@@ -525,3 +525,15 @@ a.pagination-item:hover {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+/* Aquamarine */
+.theme-base-custom .sidebar,
+.theme-base-custom .sidebar-toggle:active,
+.theme-base-custom #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #38a08e;
+}
+.theme-base-custom .container a,
+.theme-base-custom .sidebar-toggle,
+.theme-base-custom .related-posts li a:hover {
+  color: #38a08e;
+}
