@@ -1,9 +1,11 @@
 ---
 layout: post
-title: How changing 'localhost' to '127.0.0.1' sped up my work's automated test suite by 1,800%
+title: How changing 'localhost' to '127.0.0.1' sped up my tests by 1,800%
 ---
 
 **Work In Progress! Don't read this unless you're me.**
+
+You're a CS student, fresh out of sophomore year, getting ready to jump into the second half of your degree. 
 
 In 2015, I had the wonderful opportunity to start an internship at a software company. I was fresh out of my sophomore year, with just over two years of programming experience inside the classroom. I was hired as a QA, with the primary goal of automating as many regression tests in the product's test suite as possible. This meant I was invested into most components of the entire system, because in order to test something, you first have to understand the language each component talks, and for that to happen, you usually need to know how it works. For the testing, there was a pre-built testing system, but it was woefully inadequate to be a comprehensive integration testing suite.
 
