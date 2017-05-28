@@ -102,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
+  padding-top:0.25rem;
   color: #505050;
 }
 .masthead-title a {
@@ -112,6 +113,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   color: #c0c0c0;
   letter-spacing: 0;
+}
+.masthead .container .logo {
+  float:left;
+}
+.masthead .container .logo img {
+  width:2rem;
+  height:2rem;
+  margin-bottom:0
 }
 
 @media (max-width: 48rem) {

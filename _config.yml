@@ -21,3 +21,6 @@ version:          1.0.0
 
 github:
   repo:           https://github.com/hyperparticle/hyperparticle.github.io
+
+# Gems
+gems: [jekyll-paginate]
