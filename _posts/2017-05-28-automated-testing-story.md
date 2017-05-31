@@ -3,7 +3,7 @@ layout: post
 title: How changing 'localhost' to '127.0.0.1' sped up my test suite by 1,800%
 ---
 
-**Work In Progress! Don't read this unless you're me.**
+# **Work In Progress!**
 
 I would like to share a (somewhat recent) story on how a one-line code change improved my understanding of software engineering; it's an experience in my life that has had a profound effect on my work ethic ever since.
 
