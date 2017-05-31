@@ -13,6 +13,8 @@ Humans can contradict themselves regularly, yet the universe doesn't implode. Pe
 
 ## Related Musings
 
+### A different logical system
+
 Somehow rectifiers (ReLUs) are more effective than the sigmoid function. Rectifiers have the activation function, 
 ```
 y = max(0, x),
@@ -21,6 +23,14 @@ where `y = x` for `x > 0` and `y = 0` for `x < 0`. Could a system of logic be de
 
 1. There exists falsehood `x = 0` or truth `x > 0` for a real value `x in [0, inf]`.
 2. For any pair of truths `a,b`, if `a > b`, `a` has greater truth than `b`.
+
+### Useful logical systems
+
+We want to describe some logical systems as being more _useful_ than others. The notion of usefulness can be intuitively thought of as the ability for it to solve practical problems in the real world (but is this the right way to think about it?). Consider the logical system with one lone axiom:
+```
+The only theorem that exists is this one.
+```
+Not very useful, is it? Yet it is both consistent and contradiction-free.
 
 ## Links
 - [Principle of bivalence](https://en.wikipedia.org/wiki/Principle_of_bivalence)
