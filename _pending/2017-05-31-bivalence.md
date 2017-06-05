@@ -34,6 +34,7 @@ Not very useful, is it? Yet it is both consistent and contradiction-free.
 
 ## Links
 - [Principle of bivalence](https://en.wikipedia.org/wiki/Principle_of_bivalence)
+- [Law of exculded middle](https://en.wikipedia.org/wiki/Law_of_excluded_middle)
 - [Many-valued logic](https://en.wikipedia.org/wiki/Many-valued_logic)
 - [Paraconsistent logic](https://en.wikipedia.org/wiki/Paraconsistent_logic)
 - [Fuzzy logic](https://en.wikipedia.org/wiki/Fuzzy_logic)
