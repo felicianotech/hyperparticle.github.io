@@ -3,19 +3,19 @@ layout: post
 title: How changing 'localhost' to '127.0.0.1' sped up my test suite by 1,800%
 ---
 
-I would like to share a (somewhat recent) story on how a one-line code change improved my understanding of software engineering; it's an experience in my life that has had a profound effect on my work ethic ever since.
+I would like to share a (somewhat recent) anecdote on how a one-line code change improved my understanding of software engineering; it's an experience in my life that has had a profound effect on my work ethic ever since. Enjoy.
 
 ## Background
 
 So it is 2015. I'm a CS student fresh out of sophomore year, getting ready to jump into the second half of my degree. At that time I had just learned how to construct a B-tree, built my own recursive descent parser, and finished a  software security research project. Having seen how quickly my peers were getting programming jobs (with just under 2 years of coding experience), I decided it was time for me to find some work too.
 
-Fast forward to the next semester, when I landed myself a software engineering job as a Quality Assurance (QA) intern. We practiced many of the common Agile practices: I attended scrum meetings, completed user stories, and documented defects.
+Fast forward to the next semester, when I landed myself a software engineering job as a QA intern. We practiced many of the common Agile practices: I attended scrum meetings, completed user stories, and documented defects.
 
 The company had amassed some technical debt in the way of automated testing, as many of the integration tests for their main product required manual intervention. So they hired me with the primary goal to automate as many regression tests in the product's test suite as possible. Most of the easy ones were already automated, and the harder ones involved actions such as clicking a series of UI buttons where no SDK was implemented, or plugging in a physical piece of hardware to the network and wait for it to modify a webpage.
 
 These integration tests naturally required me to be invested in quite a few disparate components of the entire system. One day I would be executing JavaScript in the browser, the following day I would be sniffing for packets over the network, and the next day I would write SQL queries to check for state changes. In order to for me to test any interaction between services, I had to learn the language in which each component talks, from the network protocols to the objects that abstracted these low-level details.
 
-After a couple months of getting blasted with the fire hose, things finally started to click into place. I would come in the office each day, provision a couple virtual machines (VMs), RDP/SSH into them, execute network requests, make some code changes, commit and push them, attend a meeting or two, and then close up shop.
+After a couple months of getting blasted with the fire hose, things finally started to click into place. I would come in the office each day, provision a couple VMs, RDP/SSH into them, execute network requests, make some code changes, commit and push them, attend a meeting or two, and then close up shop.
 
 ## The Issue
 
@@ -23,7 +23,7 @@ At the time, the QA team adopted the [Robot Framework](http://robotframework.org
 
 <script src="https://gist.github.com/Hyperparticle/2c2772b0eef918068b4af7dfe2478542.js"></script>
 
-Each line below `Valid Login` is executed in sequence, performing some kind of action or validation step. We used a Python driver to translate from this high-level language to the code that performs these tests. The Python class might look something like this.
+Each line is executed in sequence, the indented lines being sub-methods of a single test, performing some kind of action or validation step. We used a Python driver to translate from this high-level language to the code that performs these tests. The Python class might look something like this.
 
 <script src="https://gist.github.com/Hyperparticle/bfec7f3b2ea4a2cc2632f39853dc9dd6.js"></script>
 
@@ -39,14 +39,14 @@ I implored further. One of the developers looked briefly into it and said that e
 
 ## A Breakthrough
 
-A few months go by, and I am running the test suite more and more frequently to make sure they are working properly. Running another test? Time to go grab a cup of coffee and [meander around the office](https://xkcd.com/303/). I even at one point experimented with provisioning double the VMs so that I could run two testing environments simultaneously, saving me some waiting time.
+A few months go by, and I am running the test suite more and more frequently to make sure they are working properly. Running another test? Time to go grab a cup of coffee and [meander around the office](https://xkcd.com/303/). I even at one point experimented with provisioning double the VMs so that I could run two testing environments simultaneously, saving me some considerable waiting time.
 
 But I couldn't shake this feeling. I thought to myself.
 >How was that possible? Was what I saw a hoax? Did those tests just exit early without doing anything? Or maybe I wasn't hallucinating and I'm wasting so much time executing these tests over and over.
 
 I finally cracked. I knew I was _supposed_ to be working on this and that, but I was determined with all my soul to find that bug that had been crawling under my skin for months.
 
-So I set a timer of two hours. The race was on to see if I could find the root cause or be forever sealed into slow-test syndrome. In the mind of an intern: what is the most reasonable approach to solving this problem? Commenting out code of course! In my mind, I was thinking that if I remove all of the non-essential code and still see the tests run slow, I have a much smaller search area to look.
+So I set a time-box of two hours. The race was on to see if I could find the root cause or be forever sealed into slow-test syndrome. In the mind of an intern: what is the most reasonable approach to solving this problem? Commenting out code of course! In my mind, I was thinking that if I remove all of the non-essential code and still see the tests run slow, I have a much smaller search area to look.
 
 So I first jumped into the JavaScript files. As I was doing this I thought to myself:
 >Ok, commenting out that block broke all the Robot tests. This function isn't needed. I have no idea what _this_ piece of code does but the tests now fail randomly. Ugh, the tests are still slow. 
@@ -83,7 +83,7 @@ And without a second more, I see this pop up on my screen.
 
 ![](/public/img/robot-fast.gif)
 
-And then the most liberating feeling came upon me. BAM! The dots flew across the screen. My eyes opened wide. ***This*** is it! I briefly lifted my hands and shook them in joy.
+And then the most liberating feeling came upon me. ***BAM***! The dots flew across the screen. My eyes opened wide. ***This*** is it! I briefly lifted my hands and shook them in joy.
 
 I further whittled down the problem to this single line of code.
 ```
@@ -125,10 +125,8 @@ But the most important lesson I learned from this entire ordeal is to constantly
 
 ## After the Aftermath
 
-At the time of writing this post, I did some digging to see what might actually have caused this bizarre behavior. I landed on [this Stack Overflow post](http://stackoverflow.com/a/15436435), in which lies the answer.
+At the time of writing this post, I did some digging to see what might actually have caused this bizarre behavior. I landed on [this Stack Overflow post](http://stackoverflow.com/a/15436435), in which lies the answer. The question was about MySQL, but it still applies here.
 
-I have high confidence that the issue was caused by IPv4 vs IPv6 discrepancies on Windows machines. I vaguely remember that the QA team's VMs were configured to prefer IPv6 addresses when they could. This meant that a DNS lookup for `'localhost'` resolved to the IPv6 string `'::1'`. However, the logging server was not bound to the IPv6 address, but the IPv4 address. So Windows failed to bind to `'localhost'` in the default 1-second timeout window, in turn falling back to the IPv4 version of `'127.0.0.1'`. This inadvertently succeeded, and the tests resumed after the timeout. But the placement of this code meant that this would happen _each and every single time_ a Robot test would run. 
-
-So a DNS issue causing a timeout of 1 second would be appended to all tests being run. The likely reason why we initially saw a VM run the tests very fast was because the IPv4 address `'127.0.0.1'` was the default resolved address. How frustrating.
+I have high confidence that the issue was caused by IPv4 vs IPv6 discrepancies on Windows machines. I vaguely remember that the QA team's VMs were configured to prefer IPv6 addresses when they could. This meant that a DNS lookup for `'localhost'` resolved to the IPv6 string `'::1'`. However, the logging server was not bound to the IPv6 address, but the IPv4 address. So Windows failed to bind to `'::1'` in the default 1-second timeout window, in turn falling back to the IPv4 version, `'127.0.0.1'`. This inadvertently succeeded, and the tests resumed after the timeout. But the placement of this code meant that this would happen _each and every single time_ a test would run. The likely reason why we initially saw a VM run the tests very fast was because the IPv4 address `'127.0.0.1'` was the default resolved address. How frustrating.
 
 There's no place like `'127.0.0.1'`, eh?
