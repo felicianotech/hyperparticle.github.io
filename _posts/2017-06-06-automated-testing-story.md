@@ -29,7 +29,7 @@ Each line is executed in sequence, the indented lines being sub-methods of a sin
 
 These Python functions would further go and execute JavaScript/Java/C#/SQL scripts to test the various events in the system. So upon executing the tests, I would be greeted with a handy visualization of their execution. Each dot on the screen represents a Robot sub-method executed.
 
-![](/public/img/robot-slow.gif)
+<img src="/public/img/robot-slow.gif" style="width: 100%;">
 
 We had about 100 of these high level tests in total, which took about 1.5 hours to execute on our Windows VMs. I thought nothing of it at the time. So I'm happily writing more tests with the Robot Framework, adding new Python functions, and writing a few scripts here and there. But then came something that _really_ bugged me.
 
@@ -81,7 +81,7 @@ def __init__(self):
 
 And without a second more, I see this pop up on my screen.
 
-![](/public/img/robot-fast.gif)
+<img src="/public/img/robot-fast.gif" style="width: 100%;">
 
 And then the most liberating feeling came upon me. ***BAM***! The dots flew across the screen. My eyes opened wide. ***This*** is it! I briefly lifted my hands and shook them in joy.
 
