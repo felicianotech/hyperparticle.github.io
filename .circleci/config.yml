@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
+      - image: starefossen/ruby-node:2-8
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -22,17 +22,31 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+          - v2-dependencies-{{ checksum "Gemfile.lock" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - v2-dependencies-
 
-      - run: 
-          name: Global dependencies
-          command: npm install -g firebase-tools
+      - run:
+          name: Ruby dependencies
+          command: bundle install
 
-      - run: 
+      - run:
+          name: Node dependencies
+          command: npm install -g firebase-tools@3.9.1 --unsafe-perm
+
+      - save_cache:
+          paths:
+            - /usr/local/bundle
+            - /usr/local/lib/node_modules
+          key: v2-dependencies-{{ checksum "Gemfile.lock" }}
+
+      - run:
           name: Build
           command: bundle exec jekyll build --verbose
+      
+      - run:
+          name: Test
+          command: bundle exec htmlproofer ./_site --check-html --disable-external
       
       - run:
           name: Deploy
