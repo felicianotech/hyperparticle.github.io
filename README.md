@@ -1,5 +1,5 @@
 # [Hyperparticle](https://hyperparticle.com)
-Recursion is recursive. A personal website. https://hyperparticle.com
+Dan Kondratyuk's website. https://hyperparticle.com
 
 ## Author
 
