@@ -3,6 +3,8 @@ layout: post
 title: 'Migrating my Jekyll Website from GitHub Pages to Firebase Hosting'
 ---
 
+<img src="/public/img/firebase.png" alt="Firebase Logo">
+
 # Overview
 
 I really like GitHub Pages as a a free and easy way for creating simple static websites. One major drawback is that HTTPS is not supported for custom domains (it's a [long standing issue](https://github.com/isaacs/github/issues/156)). I would like this personal website to have a custom domain name, and unsecured HTTP is unacceptable (and no, using CloudFlare will not solve it entirely), so it's a deal breaker for me.

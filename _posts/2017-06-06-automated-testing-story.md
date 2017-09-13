@@ -3,6 +3,8 @@ layout: post
 title: How changing 'localhost' to '127.0.0.1' sped up my test suite by 1,800%
 ---
 
+<img src="/public/img/gears-transparent.png" alt="Gears">
+
 I would like to share a (somewhat recent) anecdote on how a one-line code change improved my understanding of software engineering; it's an experience in my life that has had a profound effect on my work ethic ever since. Enjoy.
 
 ## Background
@@ -29,7 +31,7 @@ Each line is executed in sequence, the indented lines being sub-methods of a sin
 
 These Python functions would further go and execute JavaScript/Java/C#/SQL scripts to test the various events in the system. So upon executing the tests, I would be greeted with a handy visualization of their execution. Each dot on the screen represents a Robot sub-method executed.
 
-<img src="/public/img/robot-slow.gif" style="width: 100%;" alt="Robot Example">
+<img src="/public/img/robot-slow.gif" alt="Robot Example">
 
 We had about 100 of these high level tests in total, which took about 1.5 hours to execute on our Windows VMs. I thought nothing of it at the time. So I'm happily writing more tests with the Robot Framework, adding new Python functions, and writing a few scripts here and there. But then came something that _really_ bugged me.
 
@@ -81,7 +83,7 @@ def __init__(self):
 
 And without a second more, I see this pop up on my screen.
 
-<img src="/public/img/robot-fast.gif" style="width: 100%;" alt="Robot Example 2">
+<img src="/public/img/robot-fast.gif" alt="Robot Example 2">
 
 And then the most liberating feeling came upon me. ***BAM***! The dots flew across the screen. My eyes opened wide. ***This*** is it! I briefly lifted my hands and shook them in joy.
 
@@ -125,7 +127,7 @@ But the most important lesson I learned from this entire ordeal is to constantly
 
 ## After the Aftermath
 
-At the time of writing this post, I did some digging to see what might actually have caused this bizarre behavior. I landed on [this Stack Overflow post](http://stackoverflow.com/a/15436435), in which lies the answer. The question was about MySQL, but it still applies here.
+At the time of writing this post, I did some digging to see what might actually have caused this bizarre behavior. I landed on [this Stack Overflow post](https://stackoverflow.com/a/15436435), in which lies the answer. The question was about MySQL, but it still applies here.
 
 I have high confidence that the issue was caused by IPv4 vs IPv6 discrepancies on Windows machines. I vaguely remember that the QA team's VMs were configured to prefer IPv6 addresses when they could. This meant that a DNS lookup for `'localhost'` resolved to the IPv6 string `'::1'`. However, the logging server was not bound to the IPv6 address, but the IPv4 address. So Windows failed to bind to `'::1'` in the default 1-second timeout window, in turn falling back to the IPv4 version, `'127.0.0.1'`. This inadvertently succeeded, and the tests resumed after the timeout. But the placement of this code meant that this would happen _each and every single time_ a test would run. The likely reason why we initially saw a VM run the tests very fast was because the IPv4 address `'127.0.0.1'` was the default resolved address for localhost. How frustrating.
 

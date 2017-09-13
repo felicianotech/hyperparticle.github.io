@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
  * checkbox (no change in URL means no polluted browser history), but this uses
  * `position` for the menu to avoid some potential content reflow issues.
  *
- * Source: http://css-tricks.com/off-canvas-menu-with-css-target/#comment-207504
+ * Source: https://css-tricks.com/off-canvas-menu-with-css-target/#comment-207504
  */
 
 /* Style and "hide" the sidebar */
@@ -270,7 +270,7 @@ a.sidebar-nav-item:focus {
  * containing block. Put simply, the fixed sidebar toggle behaves like
  * `position: absolute;` when transformed.
  *
- * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+ * Read more about it at https://meyerweb.com/eric/thoughts/2011/09/12/.
  */
 
 .wrap,
@@ -308,6 +308,11 @@ a.sidebar-nav-item:focus {
 .page,
 .post {
   margin-bottom: 4em;
+}
+
+.post img {
+  max-width: 100%;
+  margin: auto;
 }
 
 /* Blog post or page title */
@@ -539,10 +544,10 @@ a.pagination-item:hover {
 .theme-base-custom .sidebar,
 .theme-base-custom .sidebar-toggle:active,
 .theme-base-custom #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #38a08e;
+  background-color: #309986;
 }
 .theme-base-custom .container a,
 .theme-base-custom .sidebar-toggle,
 .theme-base-custom .related-posts li a:hover {
-  color: #38a08e;
+  color: #309986;
 }
