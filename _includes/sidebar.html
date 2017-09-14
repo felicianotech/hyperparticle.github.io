@@ -5,6 +5,14 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
+    <span class="post-meta">
+      <a href="/about">
+        <img class="avatar" src="{{ page.avatar }}" alt="Avatar">
+      </a>
+      <span class="author">
+        <a href="/about">{{ page.author }}</a>
+      </span>
+    </span>
     <p>{{ site.description }}</p>
   </div>
 
@@ -33,7 +41,7 @@
   <div class="sidebar-item">
     <p>
       <!--&copy; {{ site.time | date: '%Y' }}. All rights reserved.-->
-      Dan Kondratyuk, {{ site.time | date: '%Y' }}
+      Hyperparticle, {{ site.time | date: '%Y' }}
     </p>
   </div>
 </div>

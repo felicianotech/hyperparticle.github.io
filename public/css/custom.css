@@ -1,0 +1,27 @@
+/**
+ * Custom CSS specific to this website
+ */
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-meta .avatar {
+  border-radius: 50%;
+	height: 2rem;
+  width: 2rem;
+  max-width: none;
+  margin: initial;
+  border: 1px solid #bbb;
+}
+
+.author {
+  padding: 0 10px;
+  color: #9a9a9a;
+}
+
+.post-meta .post-date {
+  margin: 0 0 0 auto;
+}

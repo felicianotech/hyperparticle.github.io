@@ -24,9 +24,15 @@ defaults:
       type: 'post'
     values:
       comments: true
+  # Author info
+  - scope:
+      path: ''
+    values:
+      author: 'Dan Kondratyuk'
+      avatar: '/public/img/dan-stencil-portrait-400x400.png'
 
 # Custom vars
-version:          1.0.0
+version:          1.1.0
 
 github:
   repo:           https://github.com/hyperparticle/hyperparticle.github.io
