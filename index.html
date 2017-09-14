@@ -12,9 +12,11 @@ title: Home
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
+    <span class="post-date">
+      {{ post.date | date_to_string }}
+      {% if post.comments %} • <a href="https://hyperparticle.com/{{ post.url }}#disqus_thread">0 Comments</a>
+      {% endif %}
+    </span>
   </div>
   {% endfor %}
 </div>
