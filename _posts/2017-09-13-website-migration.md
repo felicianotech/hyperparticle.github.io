@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Migrating my Jekyll Website from GitHub Pages to Firebase Hosting'
+title: 'Migrating a Jekyll Website from GitHub Pages to Firebase Hosting'
 ---
 
 <img src="/public/img/firebase.png" alt="Firebase Logo">
@@ -17,7 +17,7 @@ This website is still using GitHub Pages, but my custom domain is now pointing t
 
 # Steps Taken
 
-I mostly followed [this blog post](https://chris.banes.me/2017/06/02/jekyll-firebase/), so check it out for a more detailed explanation. 
+I mostly followed [this blog post](https://chris.banes.me/2017/06/02/jekyll-firebase/), so check it out for a more detailed overall explanation. Here I explain in more depth the portions that I did differently.
 
 ## Git Repository
 

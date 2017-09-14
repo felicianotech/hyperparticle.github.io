@@ -16,6 +16,15 @@ author:
 
 paginate:         5
 
+# Default vars
+defaults:
+  # Post comments
+  - scope:
+      path: '' # All files in the project
+      type: 'post'
+    values:
+      comments: true
+
 # Custom vars
 version:          1.0.0
 

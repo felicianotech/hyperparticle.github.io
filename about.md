@@ -15,9 +15,12 @@ Welcome to [my website](https://hyperparticle.com/)! I am a Computer Science gra
 
 Send me a message on [Twitter (@hyperparticle)](https://twitter.com/hyperparticle) and I'll be happy to respond when I have the time.
 
-You can find my GitHub and Twitter accounts at the following links.
+You can find my other accounts at the following links.
+
 - <https://github.com/hyperparticle>
 - <https://twitter.com/hyperparticle>
+- <https://www.linkedin.com/in/dankondratyuk>
+- <https://medium.com/@hyperparticle>
 
 ---
 [GitHub Project](https://github.com/hyperparticle/hyperparticle.github.io)
