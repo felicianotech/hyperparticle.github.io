@@ -3,7 +3,7 @@ layout: post
 title: 'Migrating a Jekyll Website from GitHub Pages to Firebase Hosting'
 ---
 
-<img src="/public/img/firebase.png" alt="Firebase Logo">
+![Firebase Logo](/public/img/firebase.png)
 
 # Overview
 

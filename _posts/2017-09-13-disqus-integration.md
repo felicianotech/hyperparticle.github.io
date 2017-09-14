@@ -3,6 +3,8 @@ layout: post
 title: 'Integrating Disqus Comments into Jekyll'
 ---
 
+![Disqus Logo](/public/img/disqus-logo.png)
+
 It turns out integrating Disqus is quite easy, no matter the website. I was pleasantly surprised to see a Jekyll option in the Disqus admin page (though, the steps were pretty much identical to their universal code option).
 
 I registered my website, plopped in Disqus's code to `post.html`, and it magically worked.
