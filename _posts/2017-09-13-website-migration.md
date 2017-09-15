@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Migrating a Jekyll Website from GitHub Pages to Firebase Hosting'
+title: Migrating a Jekyll Website from GitHub Pages to Firebase Hosting
 ---
 
 ![Firebase Logo](/public/img/firebase.png)

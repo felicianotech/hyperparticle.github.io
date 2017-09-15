@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Integrating Disqus Comments into Jekyll'
+title: Integrating Disqus Comments into Jekyll
 ---
 
 ![Disqus Logo](/public/img/disqus-logo.png)
