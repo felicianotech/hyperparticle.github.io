@@ -21,7 +21,7 @@ defaults:
   # Post comments
   - scope:
       path: '' # All files in the project
-      type: 'post'
+      type: 'posts'
     values:
       comments: true
   # Author info
@@ -38,4 +38,4 @@ github:
   repo:           https://github.com/hyperparticle/hyperparticle.github.io
 
 # Gems
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
