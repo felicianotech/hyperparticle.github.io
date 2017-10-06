@@ -19,8 +19,10 @@ You can find my other accounts at the following links.
 
 - <https://github.com/hyperparticle>
 - <https://twitter.com/hyperparticle>
+- <https://www.youtube.com/channel/UCd_9cwA6OBEL_f2NN1z0LLQ>
 - <https://www.linkedin.com/in/dankondratyuk>
 - <https://medium.com/@hyperparticle>
+- <https://reddit.com/u/hyperparticles>
 
 ---
 [GitHub Project](https://github.com/hyperparticle/hyperparticle.github.io)
