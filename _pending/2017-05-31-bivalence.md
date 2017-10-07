@@ -1,6 +1,7 @@
 ---
 layout: post
-title: 'The Principle of Bivalence: Are There Only Two Truth Values?'
+title: >-
+  The Principle of Bivalence: Are There Only Two Truth Values?
 ---
 
 # **Work In Progress!**
