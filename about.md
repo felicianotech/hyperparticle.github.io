@@ -23,6 +23,7 @@ You can find my other accounts at the following links.
 - <https://www.linkedin.com/in/dankondratyuk>
 - <https://medium.com/@hyperparticle>
 - <https://reddit.com/u/hyperparticles>
+- <https://soundcloud.com/hyperparticle>
 
 ---
 [GitHub Project](https://github.com/hyperparticle/hyperparticle.github.io)

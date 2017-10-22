@@ -25,3 +25,30 @@
 .post-meta .post-date {
   margin: 0 0 0 auto;
 }
+
+.webgl-frame {
+  width: 28rem;
+  height: 17.5rem;
+  border: 0;
+}
+
+.webgl-rounded {
+  border-radius: 10px;
+  width: 38rem;
+  height: 23.75rem;
+  overflow: hidden;
+  margin: 1rem 0 1rem 0;
+}
+
+@media (min-width: 38rem) {
+  .webgl-frame, .webgl-rounded  {
+    width: 32rem;
+    height: 20rem;
+  }
+}
+@media (min-width: 56rem) {
+  .webgl-frame, .webgl-rounded {
+    width: 38rem;
+    height: 23.75rem;
+  }
+}
