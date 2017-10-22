@@ -42,3 +42,14 @@
   width: 100%;
   height: 100%;
 }
+
+.mobile-message {
+  margin-bottom: 1rem;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-message {
+    display: block;
+  }
+}
