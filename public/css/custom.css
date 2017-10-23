@@ -27,8 +27,8 @@
 }
 
 .webgl-rounded {
-  border-radius: 10px;
   position: relative;
+  border-radius: 10px;
   padding-bottom: 62.5%;
   height: 0;
   overflow: hidden;
