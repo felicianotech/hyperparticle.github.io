@@ -1,0 +1,55 @@
+/**
+ * Social media icons
+ */
+
+.social-icons {
+  overflow: auto;
+}
+
+.social-icons * {
+  list-style-type: none;
+  float: left;
+}
+
+.social-icons * a i {
+  /* background: #205D7A; */
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 28px;
+  text-align: center;
+  margin-right: 10px;
+  padding-top: 12%;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icons * a i:hover {
+  opacity: .7;
+}
+
+.fa-github {
+  background:#24292e
+}
+
+.fa-twitter {
+  background:#00aced
+}
+
+.fa-linkedin {
+  background:#007bb6
+}
+
+.fa-youtube {
+  background:#ff0a00
+}
+
+.fa-medium {
+  background:#6bd978
+}
+.fa-reddit {
+  background:#ff4500
+}
+.fa-soundcloud {
+  background:#f16d25
+}

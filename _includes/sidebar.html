@@ -35,11 +35,19 @@
 
     <!--<a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>-->
     <a class="sidebar-nav-item" href="/public/curriculum-vitae-daniel-kondratyuk.pdf">Cirriculum Vitae</a>
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
+    <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a> -->
     <!--<span class="sidebar-nav-item">Currently v{{ site.version }}</span>-->
   </nav>
 
-  <div class="sidebar-item">
+  <div class="sidebar-nav-item">
+    <div class="social-icons">
+      <div><a href="{{ site.github.repo }}"><i class="fa fa-github"></i></a></div>
+      <div><a href="https://twitter.com/hyperparticle"><i class="fa fa-twitter"></i></a></div>
+      <div><a href="https://www.linkedin.com/in/dankondratyuk"><i class="fa fa-linkedin"></i></a></div>
+    </div>
+  </div>
+
+  <div class="sidebar-nav-item">
     <p>
       <!--&copy; {{ site.time | date: '%Y' }}. All rights reserved.-->
       Hyperparticle, {{ site.time | date: '%Y' }}
