@@ -25,8 +25,9 @@ You can find my other accounts at the following links.
   <li><a href="https://github.com/hyperparticle"><i class="fa fa-github"></i></a></li>
   <li><a href="https://twitter.com/hyperparticle"><i class="fa fa-twitter"></i></a></li>
   <li><a href="https://www.linkedin.com/in/dankondratyuk"><i class="fa fa-linkedin"></i></a></li>
-  <li><a href="https://www.youtube.com/channel/UCd_9cwA6OBEL_f2NN1z0LLQ"><i class="fa fa-youtube"></i></a></li>
+  <li><a href="https://www.youtube.com/channel/UCd_9cwA6OBEL_f2NN1z0LLQ"><i class="fa fa-youtube-play"></i></a></li>
   <li><a href="https://medium.com/@hyperparticle"><i class="fa fa-medium"></i></a></li>
-  <li><a href="https://reddit.com/u/hyperparticles"><i class="fa fa-reddit"></i></a></li>
+  <li><a href="https://reddit.com/u/hyperparticles"><i class="fa fa-reddit-alien"></i></a></li>
   <li><a href="https://soundcloud.com/hyperparticle"><i class="fa fa-soundcloud"></i></a></li>
+  <li><a href="https://www.patreon.com/hyperparticle"><img class="icon-small" src="/public/img/patreon.png"></a></li>
 </ul>

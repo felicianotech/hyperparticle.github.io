@@ -24,9 +24,18 @@
   transition: all 0.2s ease-in-out;
 }
 
-.social-icons * a i:hover {
+.social-icons * a i:hover,img:hover {
   opacity: .7;
 }
+
+
+.icon-small {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+
 
 .fa-github {
   background:#24292e
@@ -40,14 +49,14 @@
   background:#007bb6
 }
 
-.fa-youtube {
+.fa-youtube-play {
   background:#ff0a00
 }
 
 .fa-medium {
   background:#6bd978
 }
-.fa-reddit {
+.fa-reddit-alien {
   background:#ff4500
 }
 .fa-soundcloud {
