@@ -26,7 +26,7 @@
   margin: 0 0 0 auto;
 }
 
-.webgl-rounded {
+.iframe-rounded {
   position: relative;
   border-radius: 10px;
   padding-bottom: 62.5%;
@@ -35,7 +35,7 @@
   margin: 1rem 0 1rem 0;
 }
 
-.webgl-rounded .webgl-frame {
+.iframe-rounded .iframe-responsive {
   position: absolute;
   top:0;
   left: 0;
