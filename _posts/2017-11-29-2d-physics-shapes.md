@@ -7,7 +7,7 @@ title: Draw 2D Physics Shapes in Unity3D
   <iframe class="iframe-responsive" src="https://gfycat.com/ifr/ElderlyEducatedFairyfly" scrolling="no" frameborder="0"></iframe>
 </div>
 
-In this tutorial series I will show you how to draw and manipulate basic 2D physics shapes with your cursor using Unity, with no additional external dependencies (tested with 2017.2, but should also work with 5.x).
+In this tutorial series I will show you how to draw and manipulate basic 2D physics shapes with your cursor using Unity, such as rectangles, circles and triangles. No additional external dependencies are required (tested with 2017.2, but should also work with 5.x).
 
 - [Play it in your browser](https://simmer.io/@hyperparticle/draw-2d-physics-shapes)
 - [GitHub Repository](https://github.com/Hyperparticle/draw-shapes-unity)
@@ -15,7 +15,7 @@ In this tutorial series I will show you how to draw and manipulate basic 2D phys
 
 # Background
 
-Back in 2008, I had loads of fun playing [IncrediBots](http://incredibots.com/if/game.php). For the uninitiated, the game is very similar to [Phun (now Algodoo)](http://www.algodoo.com/); it involved drawing basic physics shapes and combining them with fixed, rotating, and sliding joints with motors attached to do interesting things via keyboard input. The game featured several puzzles and a rating system for published contraptions.
+Back in 2008, I had loads of fun playing [IncrediBots](http://incredibots.com/if/game.php). For the uninitiated, the game is very similar to [Phun (now Algodoo)](http://www.algodoo.com/); the game involved drawing basic physics shapes, placing rotating/sliding joints on them, and controlling motor joints with keyboard input. The game featured several puzzles and a rating system for published contraptions.
 
 Here's a few examples of things that you could make:
 
@@ -23,7 +23,7 @@ Here's a few examples of things that you could make:
   <iframe class="iframe-responsive" src="https://gfycat.com/ifr/OpenLimpingKoodoo" scrolling="no" frameborder="0"></iframe>
 </div>
 
-So let's do the same thing in Unity! Conveniently, Unity has excellent support for 2D physics, so implementing a basic prototype is very simple to do.
+So let's do the same thing in Unity! Conveniently, Unity has excellent support for 2D physics, so implementing a basic prototype is fairly simple to do.
 
 There are 4 parts to this post:
 
@@ -38,7 +38,7 @@ This tutorial will implement drawing rectangles, circles, and triangles.
 
 [![I-shaped polygon](/public/img/I-shape.png)](https://github.com/Hyperparticle/draw-shapes-unity/tree/d3b94561d464721a4607f030b6ec2d1c721f131b)
 
-To draw a mesh programmatically, Unity requires an array of its vertices and triangles. Unity allows each vertex to be colored differently, so we will demonstrate this by feeding the mesh random colors. To display the mesh, we apply it to a GameObject's `MeshFilter` component .
+To draw a mesh programmatically, Unity requires an array of its vertices and triangles. Unity allows each vertex to be colored differently, so we will demonstrate this by feeding our mesh random colors. To display the mesh, we apply it to a GameObject's `MeshFilter` component.
 
 Below is a script that can be added to any empty object to draw the shape in the image above.
 
@@ -46,7 +46,7 @@ Below is a script that can be added to any empty object to draw the shape in the
 
 Specifying vertices is easy, as we can list them in an array of `Vector2`s. The `vertices2D` array defines an I-shape. A small complication is that Unity wants an array of `Vector3`s, so we need to convert them. `System.Array.ConvertAll` is handy for this.
 
-To find the triangles in a 2D polygon's list of points, we can use a [triangulation algorithm](https://en.wikipedia.org/wiki/riangulation_(geometry)). I copied the well-suited [Triangulator.cs class](http://wiki.unity3d.com/index.php?title=Triangulator) specified in the Unity3D wiki and dropped it in the project. There's nothing too fancy here; just give the object a list of points and it will give back the indices of each triangle.
+To find the triangles in a 2D polygon's list of points, we can use a [triangulation algorithm](https://en.wikipedia.org/wiki/riangulation_(geometry)). I copied the well-suited `Triangulator.cs` class [specified in the Unity3D wiki](http://wiki.unity3d.com/index.php?title=Triangulator) and dropped it in the project. There's nothing too fancy here; just give the object a list of points and it will give back the indices of each triangle.
 
 The next step involves creating an array of colors, one for each vertex. Here they are initialized to random colors with `Random.ColorHSV()` using Linq syntax.
 
@@ -66,11 +66,11 @@ Let's start with rectangles. To draw one, we can specify its two opposite corner
 
 ## Drawing Rectangles
 
-To aid with simple operations on lists of vectors, we will create a `Util.cs` script defining a few operations.
+To aid with simple operations on lists of vectors, we will create a `Util.cs` script defining a few handy operations.
 
 <script src="https://gist.github.com/Hyperparticle/0629b17b6a7ceecec4e40764890058be.js"></script>
 
-Next we create an empty `Rectangle` prefab and attach a script called `DrawRectangle.cs`. The rectangle prefab is expected have a `MeshFilter` to draw its mesh (make sure to add a material to properly display the mesh), and `LineRenderer` to draw a rectangle outline. We expose a public `FillColor` for the mesh.
+Next, create an empty `Rectangle` prefab and attach a script called `DrawRectangle.cs`. The rectangle prefab is expected have a `MeshFilter` to draw its mesh (make sure to add a material to properly display the mesh), and `LineRenderer` to draw a rectangle outline.
 
 `DrawRectangle.cs` defines two public functions:
 
@@ -81,11 +81,11 @@ The third function, `RectangleMesh(Vector2 v0, Vector2 v1, Color fillColor)`, se
 
 <script src="https://gist.github.com/Hyperparticle/e3bb8681cbe88d02fb8af9bc91ac804b.js"></script>
 
-One thing to note is that the rectangle's transform set at the midpoint (centroid) of the mesh. The mesh's vertices are relative to this center point. This will make some future calculations nicer, e.g., attaching a box collider.
+One thing to note is that the rectangle's transform set at the midpoint (centroid) of the mesh. The mesh's vertices are relative to this center point. This will make some future calculations nicer (e.g., attaching a box collider). Also note that we expose a public `FillColor`, which is a solid fill color for the generated mesh.
 
 ## Draw Algorithm
 
-The basic algorithm for drawing a rectangle is as follows:
+The basic algorithm for drawing a rectangle is as follows.
 
 1. If the left mouse button is released and no rectangle is being updated, create a new rectangle with its two opposite corner vertices at the current mouse position. Indicate that the rectangle is being updated.
 1. If a rectangle is being updated, update the rectangle's last corner vertex to be at the current mouse position.
@@ -114,7 +114,7 @@ Lastly, the `DrawController.cs` script sets `CurrentShapeToDraw.SimulatingPhysic
 
 <script src="https://gist.github.com/Hyperparticle/5bcd6b864591504a98611b77805cdeec.js"></script>
 
-And voila, we have physics! Check out commit [3 - add rectangle physics](https://github.com/Hyperparticle/draw-shapes-unity/tree/e029010e71a2fa550b5ce2dfab72ea4ccd2092e3) to view the results in Unity.
+And voila, we have physics! Just make sure to add a static platform to prevent rectangles from falling through the scene. Check out commit [3 - add rectangle physics](https://github.com/Hyperparticle/draw-shapes-unity/tree/e029010e71a2fa550b5ce2dfab72ea4ccd2092e3) to view the results in Unity.
 
 # Drawing Multiple Shapes
 
@@ -122,7 +122,7 @@ And voila, we have physics! Check out commit [3 - add rectangle physics](https:/
   <iframe class="iframe-responsive" src="https://gfycat.com/ifr/FinePoisedDeinonychus" scrolling="no" frameborder="0"></iframe>
 </div>
 
-By extension, drawing circles, triangles, and arbitrary polygons should be very similar to drawing rectangles: supply some vertices via mouse input, create and update meshes/colliders, and simulate finished shapes. The `DrawController`'s code would largely be unchanged, what we need are scripts defined for each shape on how their mesh and collider should be drawn.
+By extension, drawing circles, triangles, and arbitrary polygons should be very similar to drawing rectangles: supply some vertices via mouse input, create and update meshes/colliders, and simulate finished shapes. The `DrawController`'s code would largely be unchanged: what we need are scripts defined for each shape on how their mesh and collider should be drawn.
 
 But there's a small catch: how do we keep track of all the different types of shapes? I opted to use inheritance as it is a tidy way of getting a handle on all shapes and update them by their public interface. First, we create an abstract class inheriting from `Monobehaviour` called `DrawShape.cs`, which looks like this:
 
@@ -140,22 +140,24 @@ As we will be drawing rectangles, circles, and triangles, we should update `Draw
 
 Unity does not support creating circle meshes or drawing circles out of the box, so we will need to implement our own circle-drawing algorithm. Fortunately, it does not require a large amount of code. The basic idea is to approximate a circle by drawing a regular polygon with enough line segments to be indistinguishable from a circle. To keep this illusion, the number of segments need to increase as the circle's perimeter increases.
 
-Below is the script for `DrawCircle.cs`, which inherits from `DrawShape`. Most of the code is identical. Here we use a `CircleCollider2D` instead of a `BoxCollider2D`. The biggest difference is in the `CircleMesh(Vector2 v0, Vector2 v1, Color fillColor)` method.
+Below is the script for `DrawCircle.cs`, which inherits from `DrawShape`. Most of the code is identical to `DrawRectangle.cs`. Here we use a `CircleCollider2D` instead of a `BoxCollider2D`. The biggest difference is in the `CircleMesh(Vector2 v0, Vector2 v1, Color fillColor)` method.
 
 <script src="https://gist.github.com/Hyperparticle/c95646bd4ddd0347582005cb1b3442d2.js"></script>
 
 We can create a manually tuned a linear function called `numSegments` which increases proportionally to the radius. For each segment, we evenly space `Vector2` points around the circle using cosine and sine functions. Then the rest is just a repeat of what we have seen before in `DrawRectangle`.
 
+Check out commit [4 - draw circle and add physics](https://github.com/Hyperparticle/draw-shapes-unity/tree/fa4633bfde7739206e6751417d661217361aad87) to view the results in Unity.
+
 ## Drawing Triangles
 
-With triangles, just change the collider type to `PolygonCollider2D` and we are halfway there.
+With triangles, just change the collider type to `PolygonCollider2D` and we are halfway there. We can create a triangle mesh directly from the list of vertices specified by the cursor.
 
 <script src="https://gist.github.com/Hyperparticle/02c9b6cf805335d029be85e0a4a3f8cd.js"></script>
 
-Can you guess how to draw arbitrary concave polygons? Hint: redefine when the shape is finished.
+Can you guess how to draw arbitrary concave polygons? Hint: redefine the condition for when the shape is finished. Check out commit [5 - draw triangle and add physics](https://github.com/Hyperparticle/draw-shapes-unity/tree/fa4633bfde7739206e6751417d661217361aad87) to view the results in Unity.
 
 # Conclusion
 
 Congratulations on making it this far! As a reward, here's an easter egg: press the spacebar when your cursor is near some shapes.
 
-I hope you enjoyed the tutorial series and have a new found appreciation for Unity's simple physics interface. And if anyone wants to collaborate with me on creating a full featured game out of this, [contact me](https://twitter.com/hyperparticle).
+I hope you enjoyed the tutorial series and have a newfound appreciation for Unity's simple physics interface. And if anyone wants to collaborate with me on creating a full featured game out of this, [contact me](https://twitter.com/hyperparticle).
