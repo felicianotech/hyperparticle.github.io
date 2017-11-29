@@ -38,9 +38,9 @@ This tutorial will implement drawing rectangles, circles, and triangles.
 
 [![I-shaped polygon](/public/img/I-shape.png)](https://github.com/Hyperparticle/draw-shapes-unity/tree/d3b94561d464721a4607f030b6ec2d1c721f131b)
 
-To draw a mesh programmatically in Unity, we need to specify its vertices and triangles. Unity allows each vertex to be colored differently, so we will supply random colors. From these, the mesh can be created and applied to the GameObject's `MeshFilter` component to display the mesh.
+To draw a mesh programmatically, Unity requires an array of its vertices and triangles. Unity allows each vertex to be colored differently, so we will demonstrate this by feeding the mesh random colors. To display the mesh, we apply it to a GameObject's `MeshFilter` component .
 
-Below is a script that can be applied to any empty object to draw the shape above.
+Below is a script that can be added to any empty object to draw the shape in the image above.
 
 <script src="https://gist.github.com/Hyperparticle/68586a8834ed6cafd4a1b2ba32ccf6ed.js"></script>
 
