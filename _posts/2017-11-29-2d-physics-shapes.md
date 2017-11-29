@@ -81,7 +81,7 @@ The third function, `RectangleMesh(Vector2 v0, Vector2 v1, Color fillColor)`, se
 
 <script src="https://gist.github.com/Hyperparticle/e3bb8681cbe88d02fb8af9bc91ac804b.js"></script>
 
-One thing to note is that the rectangle's transform set at the midpoint (centroid) of the mesh. The mesh's vertices are relative to this center point. This will make some future calculations nicer (e.g., attaching a box collider). Also note that we expose a public `FillColor`, which is a solid fill color for the generated mesh.
+One thing to note is that the rectangle's transform set at the midpoint (centroid) of the mesh. The mesh's vertices are relative to this center point. This will make some future calculations nicer (e.g., attaching a box collider). Also note that the script exposes a public `FillColor`, which fills the generated mesh with the given color.
 
 ## Draw Algorithm
 
@@ -91,7 +91,9 @@ The basic algorithm for drawing a rectangle is as follows.
 1. If a rectangle is being updated, update the rectangle's last corner vertex to be at the current mouse position.
 1. If the left mouse button is released and a rectangle is being updated, stop updating it.
 
-Below we define new script called `DrawController.cs`. Its job is to collect mouse input and send mouse coordinates to the currently active rectangle `GameObject`. The property `CurrentShapeToDraw` holds the current rectangle.
+Below we define new script called `DrawController.cs`. Its job is to collect mouse input and send mouse coordinates to the currently active rectangle `GameObject`. In essence, it specifies the draw algorithm above.
+
+The property `CurrentShapeToDraw` holds the current rectangle, and `IsDrawingShape` is the condition that allows vertices to be added to the current shape.
 
 <script src="https://gist.github.com/Hyperparticle/e54433fb470af12bae282e57e7063ab3.js"></script>
 
