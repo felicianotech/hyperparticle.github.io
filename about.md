@@ -29,5 +29,5 @@ You can find my other accounts at the following links.
   <li><a href="https://medium.com/@hyperparticle"><i class="fa fa-medium"></i></a></li>
   <li><a href="https://reddit.com/u/hyperparticles"><i class="fa fa-reddit-alien"></i></a></li>
   <li><a href="https://soundcloud.com/hyperparticle"><i class="fa fa-soundcloud"></i></a></li>
-  <li><a href="https://www.patreon.com/hyperparticle"><img class="icon-small" src="/public/img/patreon.png"></a></li>
+  <li><a href="https://www.patreon.com/hyperparticle"><img class="icon-small" src="/public/img/patreon.png" alt="Patreon logo"></a></li>
 </ul>
