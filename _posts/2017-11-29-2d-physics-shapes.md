@@ -7,7 +7,7 @@ title: Draw 2D Physics Shapes in Unity3D
   <iframe class="iframe-responsive" src="https://gfycat.com/ifr/ElderlyEducatedFairyfly" scrolling="no" frameborder="0"></iframe>
 </div>
 
-In this tutorial series I will show you how to draw and manipulate basic 2D physics shapes with your cursor using Unity, such as rectangles, circles and triangles. No additional external dependencies are required (tested with 2017.2, but should also work with 5.x).
+In this tutorial I will show you how to draw and manipulate basic 2D physics shapes with your cursor using Unity, such as rectangles, circles and triangles. No additional external dependencies are required (tested with 2017.2, but should also work with 5.x).
 
 - [Play it in your browser](https://simmer.io/@hyperparticle/draw-2d-physics-shapes)
 - [GitHub Repository](https://github.com/Hyperparticle/draw-shapes-unity)
@@ -17,7 +17,7 @@ In this tutorial series I will show you how to draw and manipulate basic 2D phys
 
 Back in 2008, I had loads of fun playing [IncrediBots](http://incredibots.com/if/game.php). For the uninitiated, the game is very similar to [Phun (now Algodoo)](http://www.algodoo.com/); the game involved drawing basic physics shapes, placing rotating/sliding joints on them, and controlling motor joints with keyboard input. The game featured several puzzles and a rating system for published contraptions.
 
-Here's a few examples of things that you could make:
+Here's a few examples of things that you could make (Credit: [uraniu235](https://www.youtube.com/watch?v=R1edMskurx0)):
 
 <div class="iframe-rounded" style="width:96%">
   <iframe class="iframe-responsive" src="https://gfycat.com/ifr/OpenLimpingKoodoo" scrolling="no" frameborder="0"></iframe>
@@ -162,4 +162,4 @@ Can you guess how to draw arbitrary concave polygons? Hint: redefine the conditi
 
 Congratulations on making it this far! As a reward, here's an easter egg: press the spacebar when your cursor is near some shapes.
 
-I hope you enjoyed the tutorial series and have a newfound appreciation for Unity's simple physics interface. And if anyone wants to collaborate with me on creating a full featured game out of this, [contact me](https://twitter.com/hyperparticle).
+I hope you enjoyed the tutorial and have a newfound appreciation for Unity's simple physics interface. And if anyone wants to collaborate with me on creating a full featured game out of this, [contact me](https://twitter.com/hyperparticle).
