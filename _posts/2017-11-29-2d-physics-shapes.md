@@ -156,7 +156,7 @@ With triangles, just change the collider type to `PolygonCollider2D` and we are 
 
 <script src="https://gist.github.com/Hyperparticle/02c9b6cf805335d029be85e0a4a3f8cd.js"></script>
 
-Can you guess how to draw arbitrary concave polygons? Hint: redefine the condition for when the shape is finished. Check out commit [5 - draw triangle and add physics](https://github.com/Hyperparticle/draw-shapes-unity/tree/fa4633bfde7739206e6751417d661217361aad87) to view the results in Unity.
+Can you guess how to draw arbitrary concave polygons? Hint: redefine the condition for when the shape is finished. Check out commit [5 - draw triangle and add physics](https://github.com/Hyperparticle/draw-shapes-unity/tree/f01f5a1935d1ed6d8776e37f3c1365da76205e61) to view the results in Unity.
 
 # Conclusion
 
