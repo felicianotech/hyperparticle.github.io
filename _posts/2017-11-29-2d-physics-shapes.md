@@ -11,7 +11,7 @@ In this tutorial series I will show you how to draw and manipulate basic 2D phys
 
 - [Play it in your browser](https://simmer.io/@hyperparticle/draw-2d-physics-shapes)
 - [GitHub Repository](https://github.com/Hyperparticle/draw-shapes-unity)
-- [Unity Asset Store Bundle](http://u3d.as/YUt)
+- [Unity Asset Store Bundle](https://www.assetstore.unity3d.com/#!/content/105996)
 
 # Background
 
