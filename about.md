@@ -8,7 +8,7 @@ title: About
 ## Dan Kondratyuk
 
 <p class="message">
-  I love a fresh challenge—be it a math problem, a physics puzzle, or software architecture quandary.
+  I love a fresh challenge—be it a math problem, a physics puzzle, or machine learning quandary.
 </p>
 
 Problem solving is my bread and butter; it gets me up in the morning every day, energized and ready to tackle any challenge hurled my way. Although I specialize in AI and machine learning research, I love tinkering with Group Theory and the Unity3D game engine.

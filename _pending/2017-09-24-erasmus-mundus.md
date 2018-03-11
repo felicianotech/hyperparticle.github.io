@@ -4,17 +4,58 @@ title: >-
   Life as an Erasmus Mundus Student: Charles University in Prague, Semester 1
 ---
 
-If I told myself a year ago that I would be studying for my Master's in Europe, I would think I was crazy. But many events have transpired since then.
+![Prague](/public/img/prague-city.jpg)
 
-Well, I've made it to the Czech Republic. Something tells me this process should have been easier, but it wasn't.
+If I told myself a year ago that I would be studying for my Master's in Europe, I would think I was crazy. I'm not typically one to go on adventures into the unknown, let alone a foreign country, but I have decided to try something different for a change.
+
+My first semester at Charles University in Prague is now over, and so I would like to take a step back and share some of my experiences studying abroad in Europe, namely Prague. Here are some of the topics I will be covering:
+
+1. The Erasmus Mundus Program
+2. Transportation
+3. Weather
+4. Sights and Tours
+5. Housing
+6. Bureaucracy
+7. Coursework
+8. Final Remarks
+
+## The Erasmus Mundus Program
+
+I first heard of the Erasmus Mundus Master's program from a former alumnus, now a current professor at Boise State University. Basically, students in the program get the opportunity to study at two European partner universities, one year each, to obtain two Master's degrees at the end of it. I applied for the Language Communication Technologies (LCT) program in January 2017 and received an acceptance notice in April.
+
+In addition, I received a scholarship which is essentially providing me a free education for my entire study period. I have more than enough funds for tuition, housing, living expenses, transportation, food, and basically anything else I need to live comfortably. It turns out living in Europe is cheap (aside from buying tech). Tuition, despite being double for overseas students (8,500 instead of 4,250), is completely covered. I'm grateful for this, as college expenses in the US is notoriously expensive, especially for Master's programs, which can reach as high as $40,000 for University costs alone. 
+
+But many events have transpired since then.
+
+Well, I've made it to the Czech Republic.
 
 It took a couple days for the jet lag to wear off. A 7.5 hour flight is not a comfortable one.
 
-Instead of going with the dorms, I've decided to stay at an apartment.
-
 On my third day in Prague I registered with the foreign police. The people I met with were highly unprofessional.
 
-I missed out on most of the activities for orientation week, as they've all been reserved pretty quickly.
+## Transportation in Prague
+
+The transportation system around Prague is pretty great. The system of metro lines, trams, and busses ensure that you can get anywhere in the city in a short period of time. Tickets are quite cheap, and allow you to board any of the transportation in Prague. There's even a small boat that can take you from one side of the Vltava river to the other.
+
+## Weather
+
+Weather here is fairly calm and predictable. On most days, the sky will be overcast with clouds. Every few days it rains
+
+I'm used to much drier, erratic weather back in Idaho. 
+
+## Sights and Tours
+
+Student discounts.
+
+## Housing
+
+Instead of going with the dorms, I've decided to stay at an apartment.
+
+## Bureaucracy
+
+Something tells me this process should have been easier, but it wasn't.
+
+## Coursework
 
 Most of the classes for the first semester were compulsory. Data Structures I, Introduction to Complexity and Computability, Statistical Natural Language Processing I, General Linguistics, Natural Language Processing Technologies. I took one elective, Speech Recognition.
 
@@ -31,6 +72,14 @@ Unfortunately, the items on the exam were questions that I understood the least.
 One saving grace was that after the meeting, the exams were conducted with two instructors present, and they would both conduct the oral evaluation.
 
 There's such a disparity in difficulty among first semester classes. On the one hand we're getting an introduction to Bash scripting, Python, text processing, and on the other hand we're proving the amortized complexity of a Fibonacci Heap using probability theory. The jump in difficulty is massive.
+
+One thing that Charles University does that all other LCT-partnered universities do not is require a state exam at the conclusion of the Master's program. This means that after submitting my thesis, I will be required to go back to Prague to take a final exam on compulsory material that I have studied while at Charles University.
+
+## Final Remarks
+
+ I'm single, without a spouse or kids to take care of, young, and independent. At no other point in my life would I have an opportunity like this, to go and immerse myself in another country, expand my understanding of others' culture, and enjoy the food, sights, and activities Europe has to offer.
+
+The topic, scholarship, and prospect of being immersed in a foreign culture were all motivating factors that led me here to this place at this point in time.
 
 In the end, was it worth it? I think so. It has been such a challenge, but I've lived my life pursuing challenges. I have learned so much being independent in a foreign country.
 
