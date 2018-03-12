@@ -6,9 +6,9 @@ title: >-
 
 ![Prague](/public/img/prague-city.jpg)
 
-If I told myself a year ago that I would be studying for my Master's in Europe, I would think I was crazy. I'm not typically one to go on adventures into the unknown, let alone a foreign country, but I have decided to try something different for a change.
+If I told myself a year ago that I would be studying for my Master's in Europe, I would think I was crazy. I'm not typically one to go on adventures into the unknown, let alone a foreign country; but I have decided to try something different for a change.
 
-My first semester at Charles University in Prague is now over, and so I would like to take a step back and share some of my experiences studying abroad in Europe, namely Prague. Here are some of the topics I will be covering:
+Oh, how time flies: it's as lofty and distant as a kite, yet as quick as a bullet. My first semester at Charles University in Prague is now over, and so I would like to take a step back and share some of my experiences studying abroad in Europe, namely Prague. Here are some of the topics I will be covering:
 
 1. The Erasmus Mundus Program
 2. Transportation
