@@ -1,10 +1,44 @@
 ---
 layout: post
 title: >-
-  Life as an Erasmus Mundus Student: Charles University in Prague, Semester 1
+  Life as an Erasmus Mundus Student: Charles University in Prague, Year 1
 ---
 
+- Summary
+- Why Europe?
+  - Intro to Erasmus Mundus
+  - Motivation
+- Living in Prague
+  - Transportation
+  - Weather
+  - Sights and tours
+  - Housing
+  - Bureaucracy
+- Coursework and Topics
+  - Linguistics
+    - Phonetics
+    - Morphology & Syntax
+  - Speech Recognition
+  - Machine Translation
+  - Data Structures & Computational Complexity
+  - Statistical NLP
+  - Deep Learning
+- Extracurricular Projects
+  - One Pixel Attack Keras
+  - LemmaTag
+  - Nodulus
+- Exploring Europe
+  - Karlovy Vary
+  - Vienna
+  - Munich
+  - Saarbrucken
+  - Nancy
+- Closing Remarks
+
+
 ![Prague](/public/img/prague-city.jpg)
+
+https://kaleidoescape.wordpress.com/2017/08/03/year-1-retrospective/
 
 If I told myself a year ago that I would be studying for my Master's in Europe, I would think I was crazy. I'm not typically one to go on adventures into the unknown, let alone a foreign country; but I have decided to try something different for a change.
 
