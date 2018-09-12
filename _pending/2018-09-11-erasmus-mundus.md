@@ -4,7 +4,7 @@ title: >-
   Erasmus Mundus Retrospective: Charles University in Prague, Year 1 (Part 0)
 ---
 
-![Prague](/public/img/prague-city.jpg)
+![Prague](/public/img/prague-city-aerial.jpg)
 
 If I told myself a couple years ago that I would be studying for my Master's in Europe, I would think I was crazy. Raised in the quiet coniferous reaches of Idaho in the USA, I'm not typically one to go on adventures into the unknown, let alone a foreign country; but I have decided to try something different for a change. And that small step of courage has paid off more than I could imagine.
 
