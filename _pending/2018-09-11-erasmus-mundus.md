@@ -10,7 +10,7 @@ title: >-
 
 If I told myself a couple years ago that I would be studying for my Master's in Europe, I would think I was crazy. Raised in the quiet coniferous reaches of Boise, Idaho in the USA, I'm not typically one to go on adventures into the unknown, let alone a foreign country; but I have decided to try something different for a change. And that small step of courage has paid off more than I could imagine.
 
-I have now completed a year of graduate studies at Charles University in Prague, Czech Republic, and am gearing up for a second year at Saarland University in Saarbrücken, Germany. No one seems to immediately understand when I say I study computational linguistics. But when I show how pervasive it is, their puzzled look turns into a smile.
+I have now completed a year of graduate studies at Charles University in Prague, Czech Republic, and am gearing up for a second year at Saarland University in Saarbrücken, Germany. No one seems to immediately understand when I say I study computational linguistics. But when I show how pervasive it is in modern life, their puzzled look turns into a smile.
 
 The following post details my motivations for studying as a graduate student in Europe, as well as my first year experiences at Charles University. The list below indicates the topics I will cover.
 
