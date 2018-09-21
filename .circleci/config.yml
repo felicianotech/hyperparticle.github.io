@@ -30,14 +30,9 @@ jobs:
           name: Ruby dependencies
           command: bundle install
 
-      - run:
-          name: Node dependencies
-          command: npm install -g firebase-tools@3.9.1 --unsafe-perm
-
       - save_cache:
           paths:
             - /usr/local/bundle
-            - /usr/local/lib/node_modules
           key: v2-dependencies-{{ arch }}-{{ checksum "Gemfile.lock" }}
 
       - run:
@@ -47,7 +42,3 @@ jobs:
       - run:
           name: Test
           command: bundle exec htmlproofer ./_site --check-html --disable-external
-      
-      - run:
-          name: Deploy
-          command: firebase deploy --token=$FIREBASE_TOKEN --non-interactive
