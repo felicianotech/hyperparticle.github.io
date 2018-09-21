@@ -28,7 +28,7 @@ jobs:
 
       - run:
           name: Ruby dependencies
-          command: bundle install
+          command: apk --no-cache add libffi-dev; bundle install
 
       - save_cache:
           paths:
